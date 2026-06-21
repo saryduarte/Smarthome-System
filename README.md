@@ -35,6 +35,18 @@ Diseñar y construir una maqueta de casa inteligente basada en ESP32 que automat
 - Ensamblar todos los componentes (protoboard, HC-SR04, servomotor, relé, resistencias, luces decorativas, ESP32 y cables jumper) en la estructura física del proyecto.
 - Validar el correcto funcionamiento del prototipo mediante pruebas de control remoto vía WiFi y de respuesta del sensor de proximidad en distintas condiciones.
   
+## Arquitectura del sistema
+
+### Diagrama de bloques textual
+
+Sensor ultrasónico HC-SR04 → ESP32 → Servomotor (Puerta del garaje)
+
+Página Web → Broker MQTT (HiveMQ) → WiFi (ESP32) → Módulo Relé → Luces de la maqueta
+
+Fuente de alimentación (5V) → ESP32, Sensor HC-SR04, Módulo Relé, Servomotor y LED indicador
+
+ESP32 → LED indicador (Estado)
+  
 ## Pruebas realizadas
 
 | Prueba                    | Descripción                                                                                                                           | Resultado                                                                                                                              |
