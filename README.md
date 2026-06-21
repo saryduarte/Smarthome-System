@@ -1,5 +1,11 @@
-# Casa Inteligente Basada en ESP32
+# Casa Inteligente LED Puerta 
 
+## Integrantes
+
+* Saray Natalia Duarte Florez
+* Maria Alejandra Hormiga Navarro
+* Zabdi Francisco Martínez Alandette
+* 
 ## Descripción del Proyecto
 
 El proyecto que llevamos a cabo es una maqueta de una casa inteligente basada en ESP32. El objetivo principal consiste en que algunas de las funciones de la casa se ejecuten de manera automática mediante el uso de sensores y dispositivos de control.
