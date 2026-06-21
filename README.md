@@ -2,11 +2,13 @@
 
 ## Integrantes
 
-* Saray Duarte 
-* Maria Hormiga 
+* Saray Duarte
+* Hollman Estevez
+* María Hormiga
+* Rosaura León Rodríguez
 * Zabdi Martínez
-* Noah Perez
-* 
+* Noah Pérez
+  
 ## Descripción del Proyecto
 
 El proyecto que llevamos a cabo es una maqueta de una casa inteligente basada en ESP32. El objetivo principal consiste en que algunas de las funciones de la casa se ejecuten de manera automática mediante el uso de sensores y dispositivos de control.
