@@ -47,7 +47,7 @@ El código controla un sistema automatizado basado en un ESP32. Primero se conec
 
 ## Esquema de conexiones
 
-![Diagrama de conexión](esquemas/diagrama_conexion.png)
+![Diagrama de conexión](esquemas/diagrama_conexion_1.jpg)
 https://wokwi.com/projects/467297961384885249
 
   
