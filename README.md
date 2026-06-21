@@ -37,13 +37,8 @@ Diseñar y construir una maqueta de casa inteligente basada en ESP32 que automat
   
 ## Arquitectura del sistema
 
-### Diagrama de bloques textual
-
-Sensor ultrasónico HC-SR04 → ESP32 → Servomotor (Puerta del garaje)
-
-Página Web → Broker MQTT (HiveMQ) → WiFi (ESP32) → Módulo Relé → Luces de la maqueta
-
-Fuente de alimentación (5V) → ESP32, Sensor HC-SR04, Módulo Relé, Servomotor y LED indicador
+### Imagen del diagrama.
+![Arquitectura del sistema](docs/imagenes/diagrama_bloques.png)
 
 ESP32 → LED indicador (Estado)
 
@@ -51,8 +46,7 @@ ESP32 → LED indicador (Estado)
 El código controla un sistema automatizado basado en un ESP32. Primero se conecta a una red WiFi y a un servidor MQTT para enviar y recibir información en tiempo real. Luego utiliza un sensor ultrasónico para detectar la presencia de un objeto o persona. Cuando la distancia medida es menor a la configurada, el sistema abre una puerta mediante un servomotor y mantiene la puerta abierta si hay presencia. Después de unos segundos sin detectar movimiento, la puerta se cierra automáticamente. Además, el programa permite controlar un relé mediante comandos MQTT, publica el estado del relé, la puerta, la distancia medida y la presencia detectada, e intenta reconectarse automáticamente a la red WiFi y al servidor MQTT en caso de pérdida de conexión.
 
 ## Esquema de conexiones
-![Arquitectura del sistema](docs/imagenes/diagrama_bloques.png)
-
+![Esquema de conexión](esquemas/diagrama_conexion_1.png)
 https://wokwi.com/projects/467297961384885249
 
   
