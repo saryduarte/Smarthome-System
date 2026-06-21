@@ -81,3 +81,13 @@ Una vez realizadas estas correcciones, el sistema operó de manera satisfactoria
 - Sistema de alertas con buzzer: implementar una alarma sonora cuando la puerta del garaje permanezca abierta por demasiado tiempo o se detecte un evento inusual.
 - Cámara de seguridad: incorporar una pequeña cámara en el garaje que capture imágenes al detectar proximidad y las envíe al celular del usuario.
 - Alimentación con energía solar: alimentar el sistema con un panel solar y batería recargable para hacerlo más eficiente y sostenible.
+
+## Conclusiones
+
+- **Automatización accesible:** Logramos diseñar y construir con éxito la maqueta funcional de la casa inteligente. Este proceso nos demostró que es totalmente viable usar tecnología económica y sistemas embebidos para transformar tareas del hogar que antes se hacían de forma manual en procesos automáticos orientados al confort.
+
+- **El valor de probar y corregir:** La etapa de pruebas fue fundamental para que el proyecto saliera adelante. Gracias a los ensayos constantes pudimos detectar y solucionar a tiempo fallas con el software, la necesidad de reinstalar librerías y los problemas de conexión con el módulo relé.
+
+- **Lecciones del hardware real:** Aunque el servomotor reaccionaba bien a las señales de proximidad, no tuvo el torque o la fuerza suficiente para levantar la puerta del garaje de manera eficiente. Este inconveniente nos dejó un gran aprendizaje técnico: en ingeniería es vital calcular correctamente las cargas mecánicas antes de elegir los componentes.
+
+- **De la teoría a la práctica:** Desarrollar este prototipo nos ayudó a consolidar los conocimientos adquiridos en la materia. Pudimos integrar la programación de sistemas embebidos, la lectura de sensores y el control de actuadores, logrando que todo el sistema funcionara de acuerdo con los objetivos planteados.
