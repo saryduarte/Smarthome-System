@@ -2,9 +2,10 @@
 
 ## Integrantes
 
-* Saray Natalia Duarte Florez
-* Maria Alejandra Hormiga Navarro
-* Zabdi Francisco Martínez Alandette
+* Saray Duarte 
+* Maria Hormiga 
+* Zabdi Martínez
+* Noah Perez
 * 
 ## Descripción del Proyecto
 
@@ -33,6 +34,28 @@ Diseñar y construir una maqueta de casa inteligente basada en ESP32 que automat
 - Programar el ESP32 para gestionar ambos sistemas de forma simultánea e independiente utilizando el lenguaje de programacion en el entorno de desarrollo correspondiente.
 - Ensamblar todos los componentes (protoboard, HC-SR04, servomotor, relé, resistencias, luces decorativas, ESP32 y cables jumper) en la estructura física del proyecto.
 - Validar el correcto funcionamiento del prototipo mediante pruebas de control remoto vía WiFi y de respuesta del sensor de proximidad en distintas condiciones.
+  
+## Pruebas realizadas
+
+| Prueba                    | Descripción                                                                                                                           | Resultado                                                                                                                              |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Reconfiguración del ESP32 | Se formateó nuevamente el ESP32 y se reinstalaron las librerías necesarias debido a una falla de funcionamiento                       | El ESP32 volvió a operar correctamente y permite cargar el programa                                                                    |
+| Conexión WiFi y MQTT      | Se verificó la conexión del ESP32 a la red WiFi y al broker MQTT utilizando el código desarrollado                                    | La conexión se estableció correctamente y se logró la comunicación con el broker                                                       |
+| Activación del relé       | Se enviaron comandos ON y OFF mediante MQTT para comprobar el control del relé                                                        | El relé respondió correctamente a los comandos recibidos                                                                               |
+| Revisión de conexiones    | Se inspeccionaron y ajustaron los cables conectados al relé después de que se desprendieron                                           | Las conexiones quedaron firmes y el sistema volvió a funcionar con normalidad                                                          |
+| Prueba de luces           | Se realizaron varios intentos para verificar el funcionamiento de las luces conectadas al relé                                        | Inicialmente las luces no funcionaban debido a que los cables del relé se habían soltado; después del ajuste funcionaron correctamente |
+| Prueba del servomotor     | Se realizó una prueba para verificar el funcionamiento del servomotor en la apertura de la puerta                                     | El servomotor respondió a las señales enviadas, pero no contaba con la fuerza suficiente para mover la puerta adecuadamente            |
+| Prueba completa           | Se integraron el ESP32, la comunicación MQTT, el relé, las luces y el servomotor para verificar el funcionamiento general del sistema | El sistema funcionó según lo esperado y respondió correctamente a las órdenes enviadas  |
+
+## Dificultades encontradas
+
+Durante el desarrollo se presentaron algunos inconvenientes técnicos. Inicialmente, el ESP32 presentó fallas de funcionamiento, por lo que fue necesario formatear la placa e instalar nuevamente las librerías requeridas. También se registraron problemas eléctricos que afectaron temporalmente las pruebas del sistema. Adicionalmente, el módulo relé presentó dificultades para realizar correctamente el cambio de estado (switch), situación que fue solucionada mediante ajustes en las conexiones y pruebas de funcionamiento.
+
+Otra dificultad encontrada fue que los cables conectados al relé, que debían permanecer sujetos mediante tornillos, se desprendían con facilidad. Esto ocasionó fallas en el funcionamiento de las luces y fue necesario volver a ajustar y asegurar las conexiones.
+
+Por último, se observó que el servomotor utilizado no tenía la fuerza suficiente para abrir la puerta de manera eficiente, lo que limitó parcialmente su funcionamiento durante las pruebas.
+
+Una vez realizadas estas correcciones, el sistema operó de manera satisfactoria.
 
 ## Mejoras Futuras
 
