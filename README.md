@@ -45,7 +45,7 @@ Diseñar y construir una maqueta de casa inteligente basada en ESP32 que automat
 | Sensor ultrasónico HC-SR04 | 1 | Detecta objetos cercanos y mide la distancia para activar la puerta automática. |
 | Servomotor | 1 | Abre y cierra la puerta del garaje según la distancia detectada. |
 | Módulo relé | 1 | Permite encender y apagar las luces de la maqueta mediante control remoto. |
-| LED indicador | 1 | Muestra visualmente el estado del sistema. |
+|  Luces LED de Navidad | 1 | Muestra visualmente el estado del sistema. |
 | Protoboard | 1 | Facilita el montaje y las conexiones del circuito sin soldadura. |
 | Cables jumper macho-macho | Varios | Realizan las conexiones eléctricas entre los componentes. |
 | Fuente de alimentación USB 5V | 1 | Suministra energía al sistema. |
