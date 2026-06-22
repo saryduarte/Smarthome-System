@@ -65,6 +65,10 @@ https://wokwi.com/projects/467297961384885249
 | Prueba del servomotor     | Se realizó una prueba para verificar el funcionamiento del servomotor en la apertura de la puerta                                     | El servomotor respondió a las señales enviadas, pero no contaba con la fuerza suficiente para mover la puerta adecuadamente            |
 | Prueba completa           | Se integraron el ESP32, la comunicación MQTT, el relé, las luces y el servomotor para verificar el funcionamiento general del sistema | El sistema funcionó según lo esperado y respondió correctamente a las órdenes enviadas  |
 
+## Estado actual del proyecto
+
+El proyecto se encuentra finalizado. El sistema permite la conexión del ESP32 a la red WiFi y al broker MQTT, además del control del relé mediante comandos remotos. También se completó la integración de los diferentes componentes del prototipo, incluyendo las luces y el servomotor, verificando su funcionamiento mediante diversas pruebas. Tras realizar los ajustes necesarios en el software, las conexiones eléctricas y los dispositivos utilizados, el sistema logró operar de manera satisfactoria y cumplir con los objetivos planteados para el proyecto.
+
 ## Dificultades encontradas
 
 Durante el desarrollo se presentaron algunos inconvenientes técnicos. Inicialmente, el ESP32 presentó fallas de funcionamiento, por lo que fue necesario formatear la placa e instalar nuevamente las librerías requeridas. También se registraron problemas eléctricos que afectaron temporalmente las pruebas del sistema. Adicionalmente, el módulo relé presentó dificultades para realizar correctamente el cambio de estado (switch), situación que fue solucionada mediante ajustes en las conexiones y pruebas de funcionamiento.
