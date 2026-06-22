@@ -42,8 +42,80 @@ Diseñar y construir una maqueta de casa inteligente basada en ESP32 que automat
 ### Imagen del diagrama.
 ![Arquitectura del sistema](docs/imagenes/diagrama_bloques.png)
 
-ESP32 → LED indicador (Estado)
+# Funcionamiento
 
+## Paso 1: Inicialización del sistema
+
+Cuando el sistema recibe energía:
+
+- El ESP32 se enciende.
+- Se configura el sensor ultrasónico.
+- Se configura el servomotor.
+- Se configura el relé.
+- Se activa la conexión WiFi.
+- Se establece comunicación con el servidor MQTT.
+
+## Paso 2: Control inteligente de las luces
+
+El usuario accede a una página web desde un computador o dispositivo móvil.
+
+Desde la interfaz puede seleccionar:
+
+### Opción ON
+
+Cuando se presiona **ON**:
+
+- La orden viaja por la red WiFi.
+- El mensaje llega al servidor MQTT.
+- El ESP32 recibe la instrucción.
+- El relé se activa.
+- Las luces se encienden.
+
+### Opción OFF
+
+Cuando se presiona **OFF**:
+
+- La orden se envía al servidor MQTT.
+- El ESP32 recibe el mensaje.
+- El relé cambia de estado.
+- Las luces se apagan.
+
+## Paso 3: Detección de proximidad
+
+Mientras el sistema está funcionando, el sensor HC-SR04 realiza mediciones continuas de distancia.
+
+- El sensor envía pulsos ultrasónicos y espera el eco de retorno.
+- El ESP32 calcula la distancia utilizando el tiempo que tarda la señal en regresar.
+
+## Paso 4: Apertura automática de la puerta
+
+Cuando un objeto se aproxima a una distancia menor que la establecida:
+
+- El sensor detecta la presencia.
+- Envía la información al ESP32.
+- El ESP32 verifica que la distancia cumple la condición programada.
+- Se genera una señal PWM.
+- El servomotor gira.
+- La puerta se abre automáticamente.
+
+## Paso 5: Mantenimiento de apertura
+
+Si el sensor continúa detectando presencia:
+
+- La puerta permanece abierta.
+- El sistema sigue monitoreando constantemente.
+- No se ejecuta el cierre mientras exista un objeto cercano.
+
+## Paso 6: Cierre automático
+
+Cuando el objeto se aleja:
+
+- El sensor deja de detectar presencia.
+- Se inicia un temporizador.
+- Después del tiempo programado, el ESP32 envía una nueva señal al servomotor.
+- El servomotor regresa a su posición inicial.
+- La puerta se cierra automáticamente.
+  
 ## Código fuente
 El código controla un sistema automatizado basado en un ESP32. Primero se conecta a una red WiFi y a un servidor MQTT para enviar y recibir información en tiempo real. Luego utiliza un sensor ultrasónico para detectar la presencia de un objeto o persona. Cuando la distancia medida es menor a la configurada, el sistema abre una puerta mediante un servomotor y mantiene la puerta abierta si hay presencia. Después de unos segundos sin detectar movimiento, la puerta se cierra automáticamente. Además, el programa permite controlar un relé mediante comandos MQTT, publica el estado del relé, la puerta, la distancia medida y la presencia detectada, e intenta reconectarse automáticamente a la red WiFi y al servidor MQTT en caso de pérdida de conexión.
 
