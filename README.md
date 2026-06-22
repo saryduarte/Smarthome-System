@@ -36,7 +36,22 @@ Diseñar y construir una maqueta de casa inteligente basada en ESP32 que automat
 - Programar el ESP32 para gestionar ambos sistemas de forma simultánea e independiente utilizando el lenguaje de programacion en el entorno de desarrollo correspondiente.
 - Ensamblar todos los componentes (protoboard, HC-SR04, servomotor, relé, resistencias, luces decorativas, ESP32 y cables jumper) en la estructura física del proyecto.
 - Validar el correcto funcionamiento del prototipo mediante pruebas de control remoto vía WiFi y de respuesta del sensor de proximidad en distintas condiciones.
-  
+
+## Componentes utilizados
+
+| Componente | Cantidad | Función |
+|------------|----------|----------|
+| ESP32 | 1 | Controlador principal del sistema. Gestiona sensores, actuadores y la comunicación WiFi. |
+| Sensor ultrasónico HC-SR04 | 1 | Detecta objetos cercanos y mide la distancia para activar la puerta automática. |
+| Servomotor | 1 | Abre y cierra la puerta del garaje según la distancia detectada. |
+| Módulo relé | 1 | Permite encender y apagar las luces de la maqueta mediante control remoto. |
+| LED indicador | 1 | Muestra visualmente el estado del sistema. |
+| Protoboard | 1 | Facilita el montaje y las conexiones del circuito sin soldadura. |
+| Cables jumper macho-macho | Varios | Realizan las conexiones eléctricas entre los componentes. |
+| Fuente de alimentación USB 5V | 1 | Suministra energía al sistema. |
+| Red WiFi | 1 | Permite la comunicación entre el ESP32 y la página web. |
+| Broker MQTT (HiveMQ) | 1 | Gestiona el intercambio de mensajes entre la página web y el ESP32. |
+
 ## Arquitectura del sistema
 
 ### Imagen del diagrama.
