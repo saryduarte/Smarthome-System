@@ -8,6 +8,7 @@
 * Rosaura León Rodríguez
 * Zabdi Martínez
 * Noah Pérez
+* Andrés Rodríguez 
   
 ## Descripción del Proyecto
 
